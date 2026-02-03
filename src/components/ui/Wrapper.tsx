@@ -1,18 +1,11 @@
 import type { ReactElement } from "react";
-import { NavLink } from "react-router";
+import Header from "./Header";
 
 const Wrapper = ({ children }: { children: ReactElement }) => {
   return (
-    <main className="">
-      <section className="bg-blue-300">
-        <ul className="space-x-2 p-2">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/products">Products</NavLink>
-          <NavLink to="/">Carts</NavLink>
-          <NavLink to="/">Checkout</NavLink>
-        </ul>
-      </section>
-      {children}
+    <main className="min-h-screen bg-white">
+      <Header />
+      <section className="mx-auto max-w-7xl px-4 py-8">{children}</section>
     </main>
   );
 };
